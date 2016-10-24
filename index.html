@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="COMP397 Assignment 1 - Choose Your Own Adventure">
+    <meta name="author" content="Elaine Mae Villarino">
+    <link rel="icon" href="Assets/images/favicon.png">
+    <title>EV - COMP397 - Assignment 2</title>
+
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="Content/reset.css">
+    <link rel="stylesheet" href="Content/game.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css">
+</head>
+
+<body onload="preload()">
+    <nav class="navbar navbar-dark bg-inverse">
+        <div class="container">
+            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
+					&#9776;
+				</button>
+            <div class="collapse navbar-toggleable-xs" id="navbar-header">
+                <a class="navbar-brand" href="http://ev-comp397-a2.azurewebsites.net">Elaine Mae Villarino - A2 </a>
+                <!-- Single button -->
+                <div class="btn-group">
+                    <button id="dropdownMenu1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+							COMP397 Links
+						</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <a class="dropdown-item" href="http://ev-comp397-a1.azurewebsites.net">Assignment 1</a>
+                        <a class="dropdown-item" href="http://ev-comp397-a2.azurewebsites.net">Assignment 2</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item">Assignment 3</a>
+                        <a class="dropdown-item">Final Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+    </nav>
+    <!-- /navbar -->
+
+    <section id="modalIn" class="yellow col-md-12" style="height:0.35em; background-color:#FFA200; margin-bottom:2em;">
+
+        <div class="container">
+            <!-- Floor Item Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <p id="introduction"></p>
+                    <h1 class="page-header">Assignment 2 - Hangman
+                    </h1>
+                    <hr>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <!-- Game Row -->
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="game">
+                        <!-- Declare Game Canvas -->
+                        <canvas id="canvas" width="640" height="480"></canvas>
+                        <div id="gameContent" style="display:block;"></div>
+                        <div id="localStorageCheck">Local Storage Support</div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- END Declare Game Canvas -->
+
+            <!-- JavaScript Libraries -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="Scripts/lib/bootstrap.min.js"></script>
+            <script src="Scripts/config/config.js"></script>
+            <!-- CreateJS Libraries -->
+            <script src="Scripts/lib/easeljs-0.8.2.min.js"></script>
+            <script src="Scripts/lib/preloadjs-0.6.2.min.js"></script>
+            <script src="Scripts/lib/soundjs-0.6.2.min.js"></script>
+            <script src="Scripts/lib/tweenjs-0.6.2.min.js"></script>
+            <!--Game Scripts-->
+            <script src="Scripts/objects/asset.js"></script>
+            <script src="Scripts/objects/label.js"></script>
+            <script src="Scripts/objects/button.js"></script>
+            <script src="Scripts/objects/scene.js"></script>
+            <!-- Scene Scripts -->
+            <script src="Scripts/scenes/game.js"></script>
+            <script src="Scripts/scenes/menu.js"></script>
+            <script src="Scripts/scenes/node1.js"></script>
+            <script src="Scripts/scenes/node2.js"></script>
+            <script src="Scripts/scenes/node3.js"></script>
+            <script src="Scripts/scenes/instructions.js"></script>
+            <script src="Scripts/scenes/gameover.js"></script>
+            <script src="Scripts/core/game.js"></script>
+</body>
+
+</html>

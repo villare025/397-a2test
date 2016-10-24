@@ -1,0 +1,18 @@
+{
+  "name": "COMP397_Assignment2",
+  "authors": [
+    "Elaine Mae Villarino <evillari@my.centennialcollege.ca>"
+  ],
+  "description": "COMP397 Assignment 2 - Simple Game with User Interface",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/villare025/COMP397_Assignment2.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "Scripts/lib",
+    "test",
+    "tests"
+  ]
+}
