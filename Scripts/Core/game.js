@@ -125,7 +125,6 @@ function changeScene() {
 // Start the Game
 function gameScreen() {
     $('#gameContent').empty();
-    $('#gameContent').append('<div id="pixHolder"><img id="hangman" src="man.png"></div>');
     $('#gameContent').append('<div id="wordHolder"></div>');
     $('#gameContent').append('<div id="clueHolder"></div>');
     $('#gameContent').append('<div id="categoryHolder"></div>');
@@ -198,7 +197,7 @@ function checkAnswer() {
         totalCorrect++;
         currentScore = currentScore + 100;
         console.log(currentScore);
-        victoryMessage();
+        winMsg();
     }
     ;
 }
@@ -206,18 +205,16 @@ function checkAnswer() {
 var strings = "";
 function wrongAnswer(a) {
     wrongAnswerCount++;
-    //var pos = (wrongAnswerCount * -75) + "px"
     $('#guesses').append("  " + a.toUpperCase());
     strings += a.toUpperCase();
     console.log(strings);
-    //$('#hangman').css("left", pos);
     if (wrongAnswerCount == 6) {
         totalWrong++;
-        defeatMessage();
+        loseMsg();
     }
 }
 // Win
-function victoryMessage() {
+function winMsg() {
     document.activeElement.blur();
     $(document).off("keyup", handleKeyUp);
     $('#feedback').append("CORRECT!<br><br><div id='replay' class='button'>CONTINUE</div>");
@@ -232,7 +229,7 @@ function victoryMessage() {
     });
 }
 // Lose
-function defeatMessage() {
+function loseMsg() {
     document.activeElement.blur();
     $(document).off("keyup", handleKeyUp);
     $('#feedback').append("You're Dead!<br>(answer= " + chosenWord + ")<div id='replay' class='button'>CONTINUE</div>");

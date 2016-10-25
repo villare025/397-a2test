@@ -167,26 +167,24 @@ module scenes {
                 totalCorrect++;
                 currentScore = currentScore + 100;
                 console.log(currentScore);
-                this.victoryMessage1();
+                this.winMsg1();
             };
         }
         private wrongAnswer1(a) {
             wrongAnswerCount++;
-            //var pos = (wrongAnswerCount * -75) + "px"
             $('#guesses').append("  " + a.toUpperCase());
             var str1 = "Guesses: ";
             var str2 = a.toUpperCase();
             var res = str1.concat(str2);
 
             this._guesses.text = res;
-                //$('#hangman').css("left", pos);
                 if(wrongAnswerCount == 6) {
                 totalWrong++;
-                this.defeatMessage1();
+                this.loseMsg1();
             }
         }
         // Win
-        private victoryMessage1() {
+        private winMsg1() {
             document.activeElement.blur();
             $(document).off("keyup", handleKeyUp);
             $('#feedback').append("CORRECT!<br><br><div id='replay' class='button'>CONTINUE</div>");
@@ -199,7 +197,7 @@ module scenes {
             });
         }
         // Lose
-        private defeatMessage1() {
+        private loseMsg1() {
             document.activeElement.blur();
             $(document).off("keyup", handleKeyUp);
             $('#feedback').append("You're Dead!<br>(answer= " + chosenWord + ")<div id='replay' class='button'>CONTINUE</div>");
